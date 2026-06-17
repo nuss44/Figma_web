@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesb - Gestão de Terceiros</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header class="app-header">
+            <button class="btn-back"><i class="fa-solid fa-arrow-left"></i></button>
+            <h1 class="app-title">Caesb</h1>
+            <button class="btn-notification"><i class="fa-regular fa-bell"></i></button>
+        </header>
+
+        <main class="app-content">
+            <section class="intro-section">
+                <h2>Gestão de Terceiros</h2>
+                <p>Facilite a rotina de quem você ama. Gerencie contas de familiares ou imóveis de sua responsabilidade em um só lugar, visualizando débitos, consumo e histórico sem sair do seu perfil.</p>
+            </section>
+
+            <button class="btn-add-account">
+                <i class="fa-solid fa-user-plus"></i> Adicionar Nova Conta
+            </button>
+
+            <section class="managed-accounts-section">
+                <h3 class="section-subtitle">Contas Gerenciadas</h3>
+
+                <div class="account-card">
+                    <div class="account-icon bg-blue">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+                    <div class="account-info">
+                        <h4>Casa do Pai - João</h4>
+                        <p class="account-details">Inscrição: 458921-0 • CPF: ***.452.121-**</p>
+                        <p class="account-status label-paga">
+                            <span class="status-meta">ÚLTIMA CONTA</span>
+                            <span><i class="fa-regular fa-circle-check"></i> Paga</span>
+                        </p>
+                    </div>
+                    <div class="account-arrow">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+
+                <div class="account-card">
+                    <div class="account-icon bg-gray">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <div class="account-info">
+                        <h4>Apartamento Tia Maria</h4>
+                        <p class="account-details">Inscrição: 112044-8 • CPF: ***.889.331-**</p>
+                        <p class="account-status label-vencida">
+                            <span class="status-meta">ÚLTIMA CONTA</span>
+                            <span><i class="fa-solid fa-circle-exclamation"></i> Vencida (R$ 142,50)</span>
+                        </p>
+                    </div>
+                    <div class="account-arrow">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+            </section>
+
+            <div class="info-box-privacy">
+                <div class="info-privacy-icon">
+                    <i class="fa-solid fa-circle-info"></i>
+                </div>
+                <div class="info-privacy-text">
+                    <p><strong>Privacidade e Segurança:</strong> Ao adicionar uma conta de terceiro, você terá acesso apenas às informações de consumo e faturamento. Alterações cadastrais estruturais continuam restritas ao titular.</p>
+                </div>
+            </div>
+
+            <div class="card card-blue-control">
+                <h3>Controle Total</h3>
+                <p>Você está gerenciando 2 imóveis adicionais.</p>
+                
+                <div class="sub-card-metrics">
+                    <div class="metric-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div class="metric-data">
+                        <span class="metric-label">Consumo Médio</span>
+                        <span class="metric-value">28.4 m³</span>
+                    </div>
+                </div>
+            </div>
+
+            <section class="how-it-works">
+                <h3>Como funciona?</h3>
+                
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <p class="step-text">Peça o número da matrícula e o CPF do titular.</p>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <p class="step-text">Insira os dados no formulário de adição.</p>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <p class="step-text">Visualize e pague as contas direto pelo seu app.</p>
+                </div>
+            </section>
+        </main>
+
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-house"></i>
+                <span>Início</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-droplet"></i>
+                <span>Consumo</span>
+            </a>
+            <a href="#" class="nav-item active">
+                <div class="active-badge">
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                </div>
+                <span>Contas</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <span>Serviços</span>
+            </a>
+        </nav>
+    </div>
+
+</body>
+</html>

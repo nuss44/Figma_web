@@ -1612,3 +1612,720 @@ img {
 .details-page .bottom-nav-link--active .bottom-nav-link__text {
 	color: #005a9c;
 }
+
+/* Configurações Gerais e Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    color: #334155;
+}
+
+/* Container que simula a tela do celular */
+.app-container {
+    width: 100%;
+    max-width: 412px;
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding-bottom: 70px; /* Espaço para a barra inferior */
+}
+
+/* Header */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.brand-title {
+    font-size: 1.1rem;
+    color: #0284c7;
+    font-weight: 700;
+}
+
+.back-btn, .notification-btn {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    color: #64748b;
+    cursor: pointer;
+}
+
+/* Conteúdo */
+.app-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.section-title h2 {
+    font-size: 1.4rem;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+
+.section-title p {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+/* Estilo Base dos Cards */
+.card {
+    border-radius: 12px;
+    padding: 16px;
+}
+
+/* Card de Alerta */
+.alert-card {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.alert-icon-wrapper {
+    background-color: #ef4444;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.alert-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.alert-card p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 16px;
+}
+
+/* Botões */
+.btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-danger {
+    background-color: #b91c1c;
+    color: white;
+}
+
+.btn-light {
+    background-color: white;
+    color: #0369a1;
+}
+
+.btn-primary {
+    background-color: #0369a1;
+    color: white;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid #0369a1;
+    color: #0369a1;
+    margin-top: 8px;
+}
+
+/* Card de Gráfico */
+.chart-card {
+    border: 1px solid #e2e8f0;
+}
+
+.chart-card h3 {
+    font-size: 1rem;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.chart-legend {
+    display: flex;
+    gap: 12px;
+    font-size: 0.75rem;
+    margin-bottom: 16px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.dot-regular { background-color: #3b82f6; }
+.dot-alert { background-color: #ef4444; }
+
+.chart-placeholder {
+    height: 100px;
+    border-bottom: 1px solid #e2e8f0;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.chart-months {
+    position: absolute;
+    bottom: -22px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+.active-month {
+    color: #ef4444;
+    font-weight: bold;
+    background-color: #fee2e2;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.chart-summary {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.summary-label {
+    display: block;
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+.summary-value {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #1e293b;
+}
+
+.value-alert {
+    color: #ef4444;
+}
+
+/* Card Azul (Verificar Hidrômetro) */
+.blue-card {
+    background-color: #0284c7;
+    color: white;
+}
+
+.blue-card-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.blue-card p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 16px;
+}
+
+.last-reading {
+    display: block;
+    text-align: center;
+    font-size: 0.7rem;
+    margin-top: 8px;
+    opacity: 0.8;
+}
+
+/* Seção de Dicas */
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #1e293b;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tip-item {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    border: 1px solid #f1f5f9;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.tip-icon-box {
+    background-color: #e0f2fe;
+    color: #0384c7;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.tip-text h4 {
+    font-size: 0.95rem;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+
+.tip-text p {
+    font-size: 0.8rem;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+/* Banner Final Informativo */
+.info-banner {
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.banner-image-placeholder {
+    height: 150px;
+    background: linear-gradient(to bottom, #cbd5e1, #94a3b8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-icon-fallback {
+    font-size: 3rem;
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+.banner-content {
+    padding: 16px;
+}
+
+.banner-content h3 {
+    font-size: 1.1rem;
+    color: #0369a1;
+    margin-bottom: 8px;
+}
+
+.banner-content p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+/* Navbar Inferior */
+.bottom-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.7rem;
+    color: #94a3b8;
+    gap: 4px;
+}
+
+.nav-item i {
+    font-size: 1.2rem;
+}
+
+.nav-item.active {
+    color: #0284c7;
+    font-weight: bold;
+}
+
+/* Configurações Gerais e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container de simulação do Smartphone */
+.app-container {
+    width: 100%;
+    max-width: 410px;
+    height: 100vh;
+    max-height: 850px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.app-container::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* Header fixo */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #edf2f7;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.app-title {
+    color: #005691;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.btn-back, .btn-notification {
+    background: none;
+    border: none;
+    font-size: 1.15rem;
+    color: #005691;
+    cursor: pointer;
+}
+
+/* Conteúdo */
+.app-content {
+    padding: 20px;
+    padding-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* Seção de Introdução */
+.intro-section h2 {
+    color: #1a202c;
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.intro-section p {
+    color: #718096;
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+/* Botão Adicionar Nova Conta */
+.btn-add-account {
+    background-color: #005691;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 14px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 86, 145, 0.2);
+}
+
+/* Subtítulos das seções */
+.section-subtitle {
+    color: #1a202c;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+/* Cards das Contas Gerenciadas */
+.account-card {
+    background-color: #ffffff;
+    border: 1px solid #edf2f7;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.account-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+}
+
+.bg-blue {
+    background-color: #e1effe;
+    color: #005691;
+}
+
+.bg-gray {
+    background-color: #f3f4f6;
+    color: #6b7280;
+}
+
+.account-info {
+    flex-grow: 1;
+}
+
+.account-info h4 {
+    color: #1a202c;
+    font-size: 0.98rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.account-details {
+    color: #9ca3af;
+    font-size: 0.75rem;
+    margin-bottom: 6px;
+}
+
+.account-status {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    font-weight: 600;
+    gap: 2px;
+}
+
+.status-meta {
+    font-size: 0.65rem;
+    color: #9ca3af;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.label-paga span:last-child {
+    color: #16a34a;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.label-vencida span:last-child {
+    color: #dc2626;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.account-arrow {
+    color: #cbd5e1;
+    font-size: 0.9rem;
+}
+
+/* Bloco Informativo de Privacidade */
+.info-box-privacy {
+    background-color: #f8fafc;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.info-privacy-icon {
+    color: #005691;
+    font-size: 1.1rem;
+    margin-top: 1px;
+}
+
+.info-privacy-text p {
+    color: #64748b;
+    font-size: 0.82rem;
+    line-height: 1.45;
+}
+
+.info-privacy-text strong {
+    color: #005691;
+}
+
+/* Card Azul: Controle Total */
+.card-blue-control {
+    background-color: #005691;
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.card-blue-control h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.card-blue-control p {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    margin-bottom: 16px;
+}
+
+.sub-card-metrics {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.metric-icon {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+.metric-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.metric-label {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+.metric-value {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+/* Seção Como Funciona */
+.how-it-works h3 {
+    color: #1a202c;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.step-number {
+    width: 26px;
+    height: 26px;
+    background-color: #005691;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.step-text {
+    color: #718096;
+    font-size: 0.88rem;
+    line-height: 1.4;
+}
+
+/* Rodapé / Barra de Navegação Inferior */
+.bottom-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    background-color: #ffffff;
+    border-top: 1px solid #edf2f7;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+    padding-bottom: 4px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #a0aec0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+    gap: 4px;
+    flex: 1;
+    height: 100%;
+}
+
+.nav-item i {
+    font-size: 1.1rem;
+}
+
+.nav-item.active {
+    color: #005691;
+    font-weight: 600;
+}
+
+/* Destaque oval da tab ativa */
+.active-badge {
+    background-color: #e1effe;
+    padding: 4px 20px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2px;
+}
+
+.nav-item.active i {
+    color: #005691;
+}

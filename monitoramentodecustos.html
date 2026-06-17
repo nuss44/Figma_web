@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesb - Monitoramento de Custos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header class="app-header">
+            <button class="back-btn"><i class="fas fa-arrow-left"></i></button>
+            <h1 class="brand-title">Caesb</h1>
+            <button class="notification-btn"><i class="far fa-bell"></i></button>
+        </header>
+
+        <main class="app-content">
+            <section class="section-title">
+                <h2>Monitoramento de Custos</h2>
+                <p>Acompanhe seu consumo mensal e detecte irregularidades.</p>
+            </section>
+
+            <div class="card alert-card">
+                <div class="alert-icon-wrapper">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <h3>Possível Vazamento</h3>
+                <p>Seu consumo deste mês está <strong>35%</strong> acima da média dos últimos 6 meses. Recomendamos uma verificação imediata das suas instalações.</p>
+                <button class="btn btn-danger">Verificar Agora</button>
+            </div>
+
+            <div class="card chart-card">
+                <h3>Consumo (m³) - últimos 6 Meses</h3>
+                <div class="chart-legend">
+                    <span class="legend-item"><span class="dot dot-regular"></span> Regular</span>
+                    <span class="legend-item"><span class="dot dot-alert"></span> Alerta</span>
+                </div>
+                
+                <div class="chart-placeholder">
+                    <div class="chart-months">
+                        <span>Mar</span><span>Abr</span><span>Mai</span><span>Jun</span><span>Jul</span><span class="active-month">Set</span>
+                    </div>
+                </div>
+
+                <div class="chart-summary">
+                    <div class="summary-item">
+                        <span class="summary-label">Média do Período</span>
+                        <span class="summary-value">12,4 m³</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Consumo Atual</span>
+                        <span class="summary-value value-alert">18,2 m³</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card blue-card">
+                <div class="blue-card-title">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h3>Verificar Hidrômetro</h3>
+                </div>
+                <p>Compare a leitura atual do seu hidrômetro com a nossa última medição para identificar erros de leitura ou vazamentos internos.</p>
+                <button class="btn btn-light"><i class="fas fa-camera"></i> Enviar Foto do Hidrômetro</button>
+                <span class="last-reading">Última leitura: 15/09/2026</span>
+            </div>
+
+            <section class="tips-section">
+                <h3 class="section-subtitle"><i class="fas fa-search-dollar"></i> Como Identificar Vazamentos</h3>
+
+                <div class="tip-item">
+                    <div class="tip-icon-box"><i class="fas fa-home"></i></div>
+                    <div class="tip-text">
+                        <h4>Teste Noturno</h4>
+                        <p>Feche todas as torneiras e não use o vaso sanitário. Se o ponteiro do hidrômetro continuar girando após 1 hora, há vazamento.</p>
+                    </div>
+                </div>
+
+                <div class="tip-item">
+                    <div class="tip-icon-box"><i class="fas fa-toilet"></i></div>
+                    <div class="tip-text">
+                        <h4>Vaso Sanitário</h4>
+                        <p>Coloque um pouco de corante na caixa acoplada. Se a cor aparecer no vaso sem acionar a descarga, há perda de água.</p>
+                    </div>
+                </div>
+
+                <div class="tip-item">
+                    <div class="tip-icon-box"><i class="fas fa-tint"></i></div>
+                    <div class="tip-text">
+                        <h4>Paredes e Solo</h4>
+                        <p>Observe manchas de mofo, umidade constante ou pintura descascando. No solo, verifique áreas que permanecem sempre úmidas.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="card info-banner">
+                <div class="banner-image-placeholder">
+                    <i class="fas fa-faucet-drip banner-icon-fallback"></i>
+                </div>
+                <div class="banner-content">
+                    <h3>Pequenos Gotejamentos, Grandes Custos</h3>
+                    <p>Uma torneira gotejando pode desperdiçar até 46 litros por dia. Isso representa mais de 1.350 litros por mês adicionados à sua conta.</p>
+                    <p>Mantenha suas instalações revisadas anualmente para evitar surpresas no orçamento.</p>
+                    <div class="banner-actions">
+                        <button class="btn btn-primary">Solicitar Revisão Técnica</button>
+                        <button class="btn btn-outline">Guia de Manutenção</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item"><i class="fas fa-home"></i> <span>Início</span></a>
+            <a href="#" class="nav-item active"><i class="fas fa-chart-bar"></i> <span>Consumo</span></a>
+            <a href="#" class="nav-item"><i class="fas fa-wallet"></i> <span>Custos</span></a>
+            <a href="#" class="nav-item"><i class="fas fa-concierge-bell"></i> <span>Serviços</span></a>
+        </nav>
+    </div>
+
+</body>
+</html>
