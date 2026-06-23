@@ -1,145 +1,221 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caesb Mobile Mockup</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-regular/1.0.0/font-regular.min.css">
-    <!-- Usando ícones padrão ou embutidos por CSS para manter a compatibilidade -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caesb App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <div class="app-container">
-        <!-- Header -->
-        <header class="app-header">
-            <span class="brand-name">Caesb</span>
-            <div class="notification-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1062b3" stroke-width="2">
-                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9J"></path>
-                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-                </svg>
-            </div>
-        </header>
+  <div class="phone-frame">
 
-        <!-- Welcome Message -->
-        <section class="welcome-section">
-            <p class="greeting">Olá, João Silva</p>
-            <h1 class="welcome-title">Bem-vindo de volta</h1>
-        </section>
+    <!-- Header -->
+    <header class="header">
+      <span class="logo">Caesb</span>
+      <button class="icon-btn" aria-label="Notificações">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+          <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+        </svg>
+      </button>
+    </header>
 
-        <!-- Balance Card -->
-        <div class="card balance-card">
-            <span class="card-label">SEU SALDO</span>
-            <div class="balance-value">R$ 142,50</div>
-            <div class="due-date-badge">
-                <span class="calendar-icon">📅</span> Vence em 15 Out
-            </div>
-            <button class="btn-pay">Pagar Agora</button>
+    <!-- Scroll Content -->
+    <main class="scroll-content">
+
+      <!-- Welcome -->
+      <section class="welcome">
+        <p class="greeting">Olá, João Silva</p>
+        <h1 class="welcome-title">Bem-vindo de volta</h1>
+      </section>
+
+      <!-- Balance Card -->
+      <section class="balance-card">
+        <p class="balance-label">SEU SALDO</p>
+        <p class="balance-amount">R$ 142,50</p>
+        <div class="due-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          Vence em 15 Out
         </div>
+        <button class="pay-btn">Pagar Agora</button>
+      </section>
 
-        <!-- Average Consumption Card -->
-        <div class="card consumption-card">
-            <div class="consumption-header">
-                <div>
-                    <span class="card-label-muted">CONSUMO MÉDIO</span>
-                    <div class="consumption-value">12,4 m³</div>
-                </div>
-                <div class="trend-icon">📉</div>
-            </div>
-            
-            <!-- Simple simulated bar chart -->
-            <div class="chart-container">
-                <div class="chart-bar" style="height: 25px;"></div>
-                <div class="chart-bar" style="height: 35px;"></div>
-                <div class="chart-bar" style="height: 45px;"></div>
-                <div class="chart-bar" style="height: 20px;"></div>
-                <div class="chart-bar active" style="height: 15px;"></div>
-            </div>
-            <p class="chart-footer">-5% em relação ao mês anterior</p>
+      <!-- Consumption Card -->
+      <section class="card consumption-card">
+        <div class="consumption-header">
+          <div>
+            <p class="card-label">CONSUMO MÉDIO</p>
+            <p class="consumption-value">12,4 m³</p>
+          </div>
+          <span class="trend-down">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/>
+              <polyline points="17 18 23 18 23 12"/>
+            </svg>
+          </span>
         </div>
-
-        <!-- Quick Actions Grid -->
-        <div class="actions-grid">
-            <div class="grid-item">
-                <div class="icon-circle light-blue">
-                    📄
-                </div>
-                <span class="grid-text">Minhas Contas</span>
-            </div>
-            <div class="grid-item">
-                <div class="icon-circle light-blue">
-                    💻
-                </div>
-                <span class="grid-text">Portal de Serviços</span>
-            </div>
+        <div class="bar-chart">
+          <div class="bar bar-s"></div>
+          <div class="bar bar-m"></div>
+          <div class="bar bar-l"></div>
+          <div class="bar bar-xl"></div>
+          <div class="bar bar-current"></div>
         </div>
+        <p class="consumption-note">-5% em relação ao mês anterior</p>
+      </section>
 
-        <!-- Long Action List -->
-        <div class="list-action-item">
-            <div class="icon-circle light-red">🏠</div>
-            <div class="list-item-content">
-                <div class="list-item-title">Comunicar Vazamento</div>
-                <div class="list-item-subtitle">Atendimento emergencial 24h</div>
-            </div>
+      <!-- Quick Actions -->
+      <div class="quick-actions">
+        <div class="card action-card">
+          <span class="action-icon blue-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1a56a4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </span>
+          <p class="action-label">Minhas Contas</p>
         </div>
-
-        <div class="list-action-item">
-            <div class="icon-circle light-grey">👥</div>
-            <div class="list-item-content">
-                <div class="list-item-title">Gerenciar Terceiros</div>
-                <div class="list-item-subtitle">Acessos compartilhados</div>
-            </div>
+        <div class="card action-card">
+          <span class="action-icon blue-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1a56a4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </span>
+          <p class="action-label">Portal de Serviços</p>
         </div>
+      </div>
 
-        <!-- Nearest Unit Section -->
-        <div class="card unit-card">
-            <div class="unit-header">
-                <h2 class="section-heading">Unidade mais próxima</h2>
-                <a href="#" class="see-all">Ver todas →</a>
-            </div>
-            <div class="unit-image-placeholder">
-                <div class="map-pin">📍</div>
-            </div>
-            <div class="unit-info">
-                <h3 class="unit-title">Posto Caesb - Águas Claras</h3>
-                <p class="unit-details">Aberto até às 18:00 • 2.4 km de distância</p>
-            </div>
+      <!-- Alert Actions -->
+      <div class="alert-actions">
+        <div class="card alert-card">
+          <span class="action-icon red-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </span>
+          <div>
+            <p class="alert-title">Comunicar Vazamento</p>
+            <p class="alert-sub">Atendimento emergencial 24h</p>
+          </div>
         </div>
+        <div class="card alert-card">
+          <span class="action-icon gray-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <line x1="23" y1="11" x2="17" y2="11"/>
+              <line x1="20" y1="8" x2="20" y2="14"/>
+            </svg>
+          </span>
+          <div>
+            <p class="alert-title">Gerenciar Terceiros</p>
+            <p class="alert-sub">Acessos compartilhados</p>
+          </div>
+        </div>
+      </div>
 
-        <!-- Other Services Section -->
-        <section class="other-services">
-            <h2 class="section-title-grey">Outros Serviços</h2>
-            <div class="services-scroll">
-                <div class="service-box">
-                    <div class="service-icon">🔄</div>
-                    <div class="service-text">Histórico de Leitura</div>
-                </div>
-                <div class="service-box">
-                    <div class="service-icon">📝</div>
-                    <div class="service-text">Alterar Titularidade</div>
-                </div>
-            </div>
-        </section>
+      <!-- Nearest Unit -->
+      <section class="card nearest-card">
+        <div class="nearest-header">
+          <h2 class="nearest-title">Unidade mais próxima</h2>
+          <a href="#" class="see-all">Ver todas →</a>
+        </div>
+        <div class="map-preview">
+          <div class="map-pin">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#1a56a4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3" fill="white" stroke="none"/>
+            </svg>
+          </div>
+        </div>
+        <div class="unit-info">
+          <p class="unit-name">Posto Caesb – Águas Claras</p>
+          <p class="unit-meta">Aberto até às 18:00 &bull; 2.4 km de distância</p>
+        </div>
+      </section>
 
-        <!-- Bottom Navigation Bar -->
-        <nav class="bottom-nav">
-            <div class="nav-item active">
-                <span class="nav-icon">🏠</span>
-                <span class="nav-label">Início</span>
-            </div>
-            <div class="nav-item">
-                <span class="nav-icon">💧</span>
-                <span class="nav-label">Consumo</span>
-            </div>
-            <div class="nav-item">
-                <span class="nav-icon">📄</span>
-                <span class="nav-label">Contas</span>
-            </div>
-            <div class="nav-item">
-                <span class="nav-icon">🔧</span>
-                <span class="nav-label">Serviços</span>
-            </div>
-        </nav>
-    </div>
+      <!-- Other Services -->
+      <section class="other-services">
+        <h2 class="section-title">Outros Serviços</h2>
+        <div class="services-row">
+          <div class="card service-card">
+            <span class="action-icon blue-light-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1a56a4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="1 4 1 10 7 10"/>
+                <path d="M3.51 15a9 9 0 1 0 .49-3.51"/>
+              </svg>
+            </span>
+            <p class="service-label">Histórico de Leitura</p>
+          </div>
+          <div class="card service-card">
+            <span class="action-icon blue-light-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1a56a4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="12" y1="18" x2="12" y2="12"/>
+                <line x1="9" y1="15" x2="15" y2="15"/>
+              </svg>
+            </span>
+            <p class="service-label">Alterar Titularidade</p>
+          </div>
+          <div class="card service-card service-card--placeholder">
+            <span class="action-icon blue-light-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1a56a4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="16"/>
+                <line x1="8" y1="12" x2="16" y2="12"/>
+              </svg>
+            </span>
+            <p class="service-label">Mais Serviços</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="bottom-spacer"></div>
+    </main>
+
+    <!-- Bottom Nav -->
+    <nav class="bottom-nav">
+      <a href="#" class="nav-item nav-item--active">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        </svg>
+        <span>Início</span>
+      </a>
+      <a href="#" class="nav-item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        <span>Consumo</span>
+      </a>
+      <a href="#" class="nav-item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+        </svg>
+        <span>Contas</span>
+      </a>
+      <a href="#" class="nav-item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.07 4.93l-1.41 1.41M4.93 4.93l1.41 1.41M12 2v2M12 20v2M4.93 19.07l1.41-1.41M19.07 19.07l-1.41-1.41M2 12h2M20 12h2"/>
+        </svg>
+        <span>Serviços</span>
+      </a>
+    </nav>
+
+  </div>
 </body>
 </html>
