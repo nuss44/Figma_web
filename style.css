@@ -2345,3 +2345,18 @@ body {
 .quick-card--link:active {
 	transform: scale(0.98);
 }
+
+.featured-card__overlay {
+	pointer-events: none;
+}
+
+.featured-card__actions {
+	position: relative;
+	z-index: 5;
+}
+
+.featured-card__button {
+	text-decoration: none;
+	position: relative;
+	z-index: 6;
+}
