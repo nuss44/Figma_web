@@ -1,214 +1,154 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caesb - Portal de Serviços</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        /* Reset e Estilos Gerais baseados no container principal */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
-        }
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Portal de Serviços - Caesb</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<div class="page-shell">
+		<div class="device-frame">
+			<!-- Top App Bar -->
+			<header class="top-app-bar">
+				<div class="top-app-bar__container">
+					<div class="top-app-bar__logo"></div>
+					<h1 class="top-app-bar__title">Caesb</h1>
+				</div>
+				<div class="top-app-bar__icon"></div>
+			</header>
 
-        body {
-            background: #F3F4F6;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
-        }
+			<!-- Main Content -->
+			<main class="screen-content">
+				<!-- Hero Search Section -->
+				<section class="hero-search-section">
+					<div class="hero-search-section__heading">
+						<h2 class="welcome-title">Portal de Serviços</h2>
+					</div>
+					<div class="hero-search-section__search">
+						<div class="search-input">
+							<div class="search-input__container">
+								<span class="search-input__text">O que você precisa?</span>
+							</div>
+							<div class="search-input__icon"></div>
+						</div>
+					</div>
+				</section>
 
-        /* Página Portal de Serviços (Novo Cores) - iPhone 17 */
-        .page-container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 0px;
-            isolation: isolate;
-            position: relative;
-            width: 402px;
-            background: #FFFFFF;
-            overflow-x: hidden;
-            box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
-        }
+				<!-- Bento Grid Services Section -->
+				<section class="bento-grid-services">
+					<!-- Card 1: Falta de Água -->
+					<div class="service-card service-card--two-up">
+						<div class="service-card__icon-container"></div>
+						<div class="service-card__content">
+							<h3 class="service-card__title">Falta de Água</h3>
+							<p class="service-card__description">Informe interrupções no abastecimento ou verifique manutenções programadas na sua região.</p>
+							<div class="service-card__action">
+								<a href="#" class="service-card__link">Comunicar Ocorrência</a>
+								<span class="service-card__arrow"></span>
+							</div>
+						</div>
+					</div>
 
-        /* Header - TopAppBar */
-        .top-app-bar {
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0px 16px;
-            width: 402px;
-            height: 64px;
-            background: #FFFFFF;
-            border-bottom: 1px solid #E5E7EB;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
+					<!-- Card 2: Atendimento -->
+					<div class="service-card service-card--two-up">
+						<div class="service-card__icon-container"></div>
+						<div class="service-card__content">
+							<h3 class="service-card__title">Atendimento</h3>
+							<p class="service-card__description">Fale com nossos atendentes via chat, agende atendimento presencial ou abra um chamado.</p>
+							<div class="service-card__action">
+								<a href="#" class="service-card__link">Canais Digitais</a>
+								<span class="service-card__arrow"></span>
+							</div>
+						</div>
+					</div>
 
-        .header-left {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            padding: 0px;
-            gap: 16px;
-            width: 110.14px;
-            height: 32px;
-        }
+					<!-- Card 3: Ligação de Água -->
+					<div class="service-card service-card--two-up">
+						<div class="service-card__icon-container"></div>
+						<div class="service-card__content">
+							<h3 class="service-card__title">Ligação de Água</h3>
+							<p class="service-card__description">Solicite novas ligações, alteração de titularidade ou religação de cavalete.</p>
+							<div class="service-card__action">
+								<a href="#" class="service-card__link">Nova Solicitação</a>
+								<span class="service-card__arrow"></span>
+							</div>
+						</div>
+					</div>
 
-        .back-button {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 8px;
-            width: 32px;
-            height: 32px;
-            border-radius: 9999px;
-            border: none;
-            background: transparent;
-            cursor: pointer;
-            color: #005A9C;
-        }
+					<!-- Card 4: Outros Serviços -->
+					<div class="service-card service-card--two-up">
+						<div class="service-card__icon-container"></div>
+						<div class="service-card__content">
+							<h3 class="service-card__title">Outros Serviços</h3>
+							<p class="service-card__description">Consulte certidões, vistorias técnicas, aferição de hidrômetro e mais serviços.</p>
+							<div class="service-card__action">
+								<a href="#" class="service-card__link">Ver Catálogo Completo</a>
+								<span class="service-card__arrow"></span>
+							</div>
+						</div>
+					</div>
 
-        .header-title {
-            width: 62.14px;
-            height: 28px;
-            font-style: normal;
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 28px;
-            display: flex;
-            align-items: center;
-            color: #005A9C;
-        }
+					<!-- Card 5: Situação de Débitos - Featured Large Card -->
+					<div class="featured-card">
+						<div class="featured-card__overlay"></div>
+						<div class="featured-card__content">
+							<h3 class="featured-card__title">2ª Via de Conta</h3>
+							<p class="featured-card__description">Consulte suas faturas em aberto, emita segunda via ou realize pagamentos via PIX de forma imediata.</p>
+							<div class="featured-card__actions">
+								<a href="segundaviadeconta.html" class="featured-card__button featured-card__button--primary">
+									Consultar<br />
+									Agora
+								</a>
+								<button class="featured-card__button featured-card__button--secondary">
+									Ver<br />
+									Histórico
+								</button>
+							</div>
+						</div>
+					</div>
+				</section>
 
-        .header-right {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            padding: 0px;
-            gap: 8px;
-            width: 32px;
-            height: 36px;
-        }
+				<!-- Informational Banner -->
+				<section class="informational-banner">
+					<div class="informational-banner__content">
+						<h3 class="informational-banner__title">Mantenha seus dados atualizados</h3>
+						<p class="informational-banner__description">Receba avisos de manutenção e faturas digitais diretamente no seu e-mail ou WhatsApp.</p>
+						<button class="informational-banner__button">Atualizar Perfil</button>
+					</div>
+					<div class="informational-banner__decorative"></div>
+				</section>
+			</main>
 
-        .notification-button {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 8px;
-            width: 32px;
-            height: 36px;
-            border-radius: 9999px;
-            border: none;
-            background: transparent;
-            cursor: pointer;
-            color: #9CA3AF;
-        }
+			<!-- Bottom Navigation Bar -->
+			<nav class="bottom-nav-bar">
+				<div class="bottom-nav-bar__container">
+					<!-- Link: Início -->
+					<a href="#" class="bottom-nav-link">
+						<div class="bottom-nav-link__icon"></div>
+						<span class="bottom-nav-link__text">Início</span>
+					</a>
 
-        /* Main Content */
-        main {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 32px 16px 128px;
-            gap: 48px;
-            width: 402px;
-            max-width: 1280px;
-        }
+					<!-- Link: Consumo -->
+					<a href="#" class="bottom-nav-link">
+						<div class="bottom-nav-link__icon"></div>
+						<span class="bottom-nav-link__text">Consumo</span>
+					</a>
 
-        /* Hero Search Section */
-        .hero-search-section {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 0px;
-            gap: 24px;
-            width: 370px;
-            height: 104px;
-            align-self: stretch;
-        }
+					<!-- Link: Contas -->
+					<a href="#" class="bottom-nav-link">
+						<div class="bottom-nav-link__icon"></div>
+						<span class="bottom-nav-link__text">Contas</span>
+					</a>
 
-        .hero-title {
-            width: 370px;
-            height: 24px;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 24px;
-            display: flex;
-            align-items: center;
-            color: #1F2937;
-            align-self: stretch;
-        }
-
-        .search-container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 0px;
-            isolation: isolate;
-            width: 370px;
-            max-width: 672px;
-            height: 56px;
-            position: relative;
-            align-self: stretch;
-        }
-
-        .search-input {
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 17px 16px 17px 48px;
-            width: 370px;
-            height: 56px;
-            background: #FFFFFF;
-            border: 1px solid #E2E2E5;
-            border-radius: 8px;
-            align-self: stretch;
-            font-size: 16px;
-            color: #1F2937;
-            outline: none;
-        }
-
-        .search-input::placeholder {
-            color: #9CA3AF;
-        }
-
-        .search-icon-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 0px;
-            position: absolute;
-            width: 18px;
-            height: 18px;
-            left: 16px;
-            top: 19px;
-            color: #9CA3AF;
-            z-index: 1;
-        }
-
-        /* Bento Grid Services Container */
-        .bento-grid-services {
-            width: 370px;
-            height: 1660px; /* Ajustado dinamicamente para comportar o posicionamento absoluto do protótipo */
-            position: relative;
-            align-self: stretch;
-        }
-
-        /* Base Card Styling */
-        .service-card {
-            box
+					<!-- Link: Serviços (ACTIVE) -->
+					<a href="#" class="bottom-nav-link bottom-nav-link--active">
+						<div class="bottom-nav-link__icon"></div>
+						<span class="bottom-nav-link__text">Serviços</span>
+					</a>
+				</div>
+			</nav>
+		</div>
+	</div>
+</body>
+</html>
