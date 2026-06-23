@@ -1,162 +1,167 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Transições Novembro</title>
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesb - Início</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-	<div class="page-shell">
-		<div class="device-frame" aria-label="Início - Caesb (Novo Cores) - iPhone 17">
-			<header class="top-app-bar">
-				<div class="top-app-bar__title">Caesb</div>
-				<img class="top-app-bar__icon" src="assets/header-icon.svg" alt="">
-			</header>
 
-			<main class="screen-content">
-				<section class="welcome-section" aria-label="Welcome Section">
-					<p class="eyebrow">Olá, João Silva</p>
-					<h1 class="welcome-title">Bem-vindo de volta</h1>
-				</section>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-left">
+                <h1 class="app-title">Caesb</h1>
+            </div>
+            <div class="header-right">
+                <button class="btn-notification">
+                    <i class="fa-regular fa-bell"></i>
+                </button>
+            </div>
+        </header>
 
-				<section class="bento-layout" aria-label="Bento Layout">
-					<article class="card card--balance">
-						<div class="card__decorative card__decorative--balance">
-							<img src="assets/balance-decorative.svg" alt="">
-						</div>
+        <main class="app-content">
+            
+            <section class="welcome-section">
+                <span class="welcome-user">Olá, João Silva</span>
+                <h2 class="welcome-title">Bem-vindo de volta</h2>
+            </section>
 
-						<div class="balance-content">
-							<div class="balance-copy">
-								<span class="label label--white">SEU SALDO</span>
-								<h2 class="balance-value">R$ 142,50</h2>
-							</div>
+            <div class="bento-layout">
+                
+                <div class="card balance-card">
+                    <div class="balance-container">
+                        <span class="balance-label">SEU SALDO</span>
+                        <h3 class="balance-value">R$ 142,50</h3>
+                        
+                        <div class="expiry-badge">
+                            <i class="fa-regular fa-calendar"></i>
+                            <span>Vence em 15 Out</span>
+                        </div>
+                    </div>
+                    
+                    <div class="btn-pay-container">
+                        <button class="btn-pay">Pagar Agora</button>
+                    </div>
+                </div>
 
-							<div class="balance-pill">
-								<img src="assets/balance-pill-icon.svg" alt="">
-								<span>Vence em 15 Out</span>
-							</div>
-						</div>
+                <div class="card consumption-card">
+                    <div class="consumption-header">
+                        <div class="consumption-info">
+                            <span class="consumption-label">CONSUMO MÉDIO</span>
+                            <h4 class="consumption-value">12,4 m³</h4>
+                        </div>
+                        <i class="fa-solid fa-chart-line trend-icon"></i>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-bar bar-20"></div>
+                        <div class="chart-bar bar-40"></div>
+                        <div class="chart-bar bar-60"></div>
+                        <div class="chart-bar bar-30"></div>
+                        <div class="chart-bar bar-active"></div> </div>
+                    
+                    <div class="chart-footer">
+                        <span>-5% em relação ao mês anterior</span>
+                    </div>
+                </div>
 
-						<div class="balance-actions">
-							<a class="primary-button" href="#">Pagar Agora</a>
-						</div>
-					</article>
+                <div class="quick-services-grid">
+                    <div class="card service-box-small">
+                        <div class="service-icon-circle accent-blue">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                        </div>
+                        <span class="service-text">Minhas Contas</span>
+                    </div>
 
-					<div class="service-grid service-grid--two-up">
-						<article class="card quick-card">
-							<div class="quick-card__icon quick-card__icon--soft-blue">
-								<img src="assets/minhas-contas-overlay.svg" alt="">
-							</div>
-							<p class="quick-card__title">Minhas Contas</p>
-						</article>
+                    <div class="card service-box-small">
+                        <div class="service-icon-circle accent-blue">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <span class="service-text">Portal de Serviços</span>
+                    </div>
+                </div>
 
-						<a class="card quick-card quick-card--link" href="portaldeservicos.html" aria-label="Ir para Portal de Serviços">
-							<div class="quick-card__icon quick-card__icon--soft-blue">
-								<img src="assets/segunda-via-overlay.svg" alt="">
-							</div>
-							<p class="quick-card__title">Portal de Serviços</p>
-						</a>
-					</div>
+                <div class="card service-box-row row-leak">
+                    <div class="service-icon-circle accent-red">
+                        <i class="fa-solid fa-droplet-slash"></i>
+                    </div>
+                    <div class="service-row-text">
+                        <span class="row-title">Comunicar Vazamento</span>
+                        <span class="row-subtitle">Atendimento emergencial 24h</span>
+                    </div>
+                </div>
 
-					<article class="card leak-card">
-						<div class="quick-card__icon quick-card__icon--soft-red">
-							<img src="assets/vazamento-overlay.svg" alt="">
-						</div>
-						<div class="leak-card__content">
-							<p class="leak-card__title">Comunicar Vazamento</p>
-							<p class="leak-card__subtitle">Atendimento emergencial 24h</p>
-						</div>
-					</article>
+                <div class="card service-box-row row-third-party">
+                    <div class="service-icon-circle accent-grey">
+                        <i class="fa-solid fa-users-gear"></i>
+                    </div>
+                    <div class="service-row-text">
+                        <span class="row-title">Gerenciar Terceiros</span>
+                        <span class="row-subtitle">Acessos compartilhados</span>
+                    </div>
+                </div>
 
-					<article class="card third-party-card">
-						<div class="quick-card__icon quick-card__icon--soft-gray">
-							<img src="assets/terceiros-background.svg" alt="">
-						</div>
-						<div class="third-party-card__content">
-							<p class="third-party-card__title">Gerenciar Terceiros</p>
-							<p class="third-party-card__subtitle">Acessos compartilhados</p>
-						</div>
-					</article>
+                <div class="card map-card">
+                    <div class="map-header">
+                        <h5 class="map-title">Unidade mais próxima</h5>
+                        <a href="#" class="btn-see-all">Ver todas <i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                    
+                    <div class="map-image-placeholder">
+                        <div class="map-pin">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="map-footer">
+                        <span class="unit-name">Posto Caesb - Águas Claras</span>
+                        <span class="unit-info">Aberto até às 18:00 • 2.4 km de distância</span>
+                    </div>
+                </div>
 
-					<article class="card map-card">
-						<div class="map-card__header">
-							<h3 class="section-title section-title--dark">Unidade mais próxima</h3>
-							<a class="section-link" href="#">
-								<span>Ver todas</span>
-								<img src="assets/ver-todas-icon.svg" alt="">
-							</a>
-						</div>
+            </div>
 
-						<div class="map-card__map">
-							<img class="map-card__map-image" src="assets/map-background.png" alt="Mapa da unidade mais próxima">
-							<img class="map-card__pin" src="assets/map-pin.svg" alt="">
-						</div>
+            <section class="secondary-services-section">
+                <h3 class="section-title">Outros Serviços</h3>
+                
+                <div class="horizontal-scroll-container">
+                    <div class="card scroll-card">
+                        <i class="fa-solid fa-clock-rotate-left service-scroll-icon"></i>
+                        <span class="scroll-card-text">Histórico de Leitura</span>
+                    </div>
 
-						<div class="map-card__footer">
-							<p class="map-card__place">Posto Caesb - Águas Claras</p>
-							<p class="map-card__details">Aberto até às 18:00 • 2.4 km de distância</p>
-						</div>
-					</article>
-				</section>
+                    <div class="card scroll-card">
+                        <i class="fa-solid fa-id-card service-scroll-icon"></i>
+                        <span class="scroll-card-text">Alterar Titularidade</span>
+                    </div>
+                </div>
+            </section>
 
-				<section class="secondary-services" aria-label="Section - Secondary Services">
-					<h2 class="section-title">Outros Serviços</h2>
+        </main>
 
-					<div class="service-strip" aria-label="Outros Serviços">
-						<article class="service-tile">
-							<img class="service-tile__icon" src="assets/historico-icon.svg" alt="">
-							<p class="service-tile__title">Histórico de Leitura</p>
-						</article>
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item active">
+                <div class="active-badge">
+                    <i class="fa-solid fa-house"></i>
+                </div>
+                <span>Início</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-droplet"></i>
+                <span>Consumo</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                <span>Contas</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <span>Serviços</span>
+            </a>
+        </nav>
+    </div>
 
-						<article class="service-tile">
-							<img class="service-tile__icon" src="assets/titularidade-icon.svg" alt="">
-							<p class="service-tile__title">Alterar Titularidade</p>
-						</article>
-
-						<article class="service-tile">
-							<img class="service-tile__icon" src="assets/debito-icon.svg" alt="">
-							<p class="service-tile__title">Débito Automático</p>
-						</article>
-
-						<article class="service-tile">
-							<img class="service-tile__icon" src="assets/manutencao-icon.svg" alt="">
-							<p class="service-tile__title">Aviso de Manutenção</p>
-						</article>
-					</div>
-				</section>
-			</main>
-
-			<nav class="bottom-nav" aria-label="BottomNavBar">
-				<a class="bottom-nav__item bottom-nav__item--active" href="#">
-					<span class="bottom-nav__button">
-						<img class="bottom-nav__icon" src="assets/nav-home.svg" alt="">
-					</span>
-					<span class="bottom-nav__label">Início</span>
-				</a>
-
-				<a class="bottom-nav__item" href="#">
-					<span class="bottom-nav__button bottom-nav__button--plain">
-						<img class="bottom-nav__icon" src="assets/nav-consumo.svg" alt="">
-					</span>
-					<span class="bottom-nav__label bottom-nav__label--muted">Consumo</span>
-				</a>
-
-				<a class="bottom-nav__item" href="#">
-					<span class="bottom-nav__button bottom-nav__button--plain">
-						<img class="bottom-nav__icon" src="assets/nav-contas.svg" alt="">
-					</span>
-					<span class="bottom-nav__label bottom-nav__label--muted">Contas</span>
-				</a>
-
-				<a class="bottom-nav__item" href="#">
-					<span class="bottom-nav__button bottom-nav__button--plain">
-						<img class="bottom-nav__icon" src="assets/nav-services.svg" alt="">
-					</span>
-					<span class="bottom-nav__label bottom-nav__label--muted">Serviços</span>
-				</a>
-			</nav>
-		</div>
-	</div>
 </body>
 </html>
